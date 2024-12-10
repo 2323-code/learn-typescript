@@ -1,0 +1,12 @@
+services:
+  ts:
+    build: .
+    environment:
+      - NODE_ENV=development
+      - PATH="/usr/local/opt/node@20/bin:$PATH"
+    volumes:
+      - ./src:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    tty: true
